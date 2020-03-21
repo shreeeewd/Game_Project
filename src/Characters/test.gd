@@ -11,8 +11,6 @@ const FLOOR_NORMAL: = Vector2.UP
 var velocity = Vector2()
 #var onGround = true
 
-func Ready():
-	pass
 
 func _physics_process(delta: float):
 	if Input.is_action_pressed("move_left"):

@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Stages/fd.png" type="Texture" id=1]
 
 [sub_resource type="SegmentShape2D" id=1]
-a = Vector2( 433.7, 45 )
+a = Vector2( 435.611, 45 )
 b = Vector2( -147.99, 45 )
 
 [sub_resource type="SegmentShape2D" id=2]
@@ -35,7 +35,7 @@ a = Vector2( 713.872, 438.111 )
 b = Vector2( 657.07, 489.749 )
 
 [sub_resource type="SegmentShape2D" id=9]
-a = Vector2( 776.946, 348.488 )
+a = Vector2( 775.993, 351.302 )
 b = Vector2( 711.055, 437.98 )
 
 [sub_resource type="SegmentShape2D" id=10]
@@ -92,7 +92,7 @@ position = Vector2( -498.573, -434.238 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
-position = Vector2( -495.936, -433.913 )
+position = Vector2( -495.794, -433.913 )
 shape = SubResource( 9 )
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
