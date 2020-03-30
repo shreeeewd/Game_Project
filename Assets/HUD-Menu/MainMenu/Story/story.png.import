@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex"
+path="res://.import/story.png-ffed258870dbfbaf104ac7875a118576.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Actors/placeholder.png"
-dest_files=[ "res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex" ]
+source_file="res://Assets/HUD-Menu/MainMenu/Story/story.png"
+dest_files=[ "res://.import/story.png-ffed258870dbfbaf104ac7875a118576.stex" ]
 
 [params]
 

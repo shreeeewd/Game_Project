@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex"
+path="res://.import/ssbmlogo1.png-0b2130a4b164fa894528f5e7cc04259f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Actors/placeholder.png"
-dest_files=[ "res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex" ]
+source_file="res://Assets/HUD-Menu/TitleScreenAnimation/Logo/ssbmlogo1.png"
+dest_files=[ "res://.import/ssbmlogo1.png-0b2130a4b164fa894528f5e7cc04259f.stex" ]
 
 [params]
 

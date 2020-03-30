@@ -2,7 +2,6 @@ extends KinematicBody2D
 
 var dashSpeed: = 1000.0
 var walkSpeed:= 300.0
-var dash:= false
 var dashPossible:= false
 
 var airSpeed:= 50.0
@@ -25,8 +24,17 @@ var freeFall:= false
 var onGround: bool 
 const FLOOR_NORMAL: = Vector2.UP
 
-var crouch:= false
+var face: String
 
+
+#Impoertant Bools
+var dash: bool
+var idle: bool
+var crouch: bool
+var facingRight: bool
+var jumpingGround: bool
+var jumpingAir: bool
+var facingLeft: bool
 
 
 var velocity:= Vector2()
@@ -42,14 +50,18 @@ func get_input():
 				#Left
 			if Input.is_action_pressed("move_left") && crouch == false && dash == false:
 				velocity.x = -walkSpeed
+				facingRight = false
 			elif Input.is_action_pressed("move_left") && crouch == false && dash == true:
 				velocity.x = -dashSpeed
+				facingRight = false
 
 				#Right
 			elif Input.is_action_pressed("move_right") && crouch == false && dash == false:
 				velocity.x = walkSpeed
+				facingRight = true
 			elif Input.is_action_pressed("move_right") && crouch == false && dash == true:
 				velocity.x = dashSpeed
+				facingRight = true
 
 			#Slowdown
 			else:
@@ -109,17 +121,23 @@ func get_input():
 				fastFall = false
 				sideSpecialCount = 1
 				recoverySpecials += 1
+				facingRight = true
 			elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special") && sideSpecialCount == 0 && freeFall == false:
 					velocity.x = -sideSpecialSpeed
 					velocity.y = jumpHeight
 					fastFall = false
 					sideSpecialCount = 1
 					recoverySpecials += 1
+					facingRight = false
 		else:
 			if Input.is_action_pressed("right") && Input.is_action_just_pressed("special"):
+				velocity.y = jumpHeight/2
 				velocity.x = sideSpecialSpeed
+				facingRight = true
 			elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special"):
 					velocity.x = -sideSpecialSpeed
+					velocity.y = jumpHeight/2
+					facingRight = false
 					
 		if recoverySpecials == 2:
 			freeFall = true		
@@ -167,8 +185,7 @@ func get_input():
 				airLim = true
 				velocity.x = -1500
 	
-
-
+				
 func _physics_process(_delta: float) -> void:
 	get_input()
 

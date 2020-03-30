@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="GameProject"
-run/main_scene="res://src/tests/test2.tscn"
+run/main_scene="res://src/tests/test.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneChanger="*res://src/misc/SceneChanger.tscn"
 
 [display]
 
@@ -91,4 +95,11 @@ shield={
 
 [rendering]
 
+quality/reflections/texture_array_reflections=false
+quality/shading/force_vertex_shading.mobile=false
+quality/shading/force_lambert_over_burley.mobile=false
+quality/shading/force_blinn_over_ggx.mobile=false
+quality/depth_prepass/enable=false
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false

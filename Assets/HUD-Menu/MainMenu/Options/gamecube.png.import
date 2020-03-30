@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex"
+path="res://.import/gamecube.png-988da3bcd5e2e264cbc1f38d7c477333.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Actors/placeholder.png"
-dest_files=[ "res://.import/placeholder.png-af034d7f9595e1ecc6f5f48669dd82a2.stex" ]
+source_file="res://Assets/HUD-Menu/MainMenu/Options/gamecube.png"
+dest_files=[ "res://.import/gamecube.png-988da3bcd5e2e264cbc1f38d7c477333.stex" ]
 
 [params]
 

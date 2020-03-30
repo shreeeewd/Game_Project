@@ -3,7 +3,6 @@
 [ext_resource path="res://Assets/Actors/placeholder.png" type="Texture" id=1]
 [ext_resource path="res://src/Characters/Placeholder/Placeholder.gd" type="Script" id=2]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
@@ -22,7 +21,7 @@ shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 2, 2 )
+zoom = Vector2( 1.5, 1.5 )
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
 smoothing_enabled = true
