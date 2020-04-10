@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_gohoubi_icon_money.wav-9ab2ad287d6dad6604b1359cb42ba4f0.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_gohoubi_icon_money.wav"
+dest_files=[ "res://.import/se_gohoubi_icon_money.wav-9ab2ad287d6dad6604b1359cb42ba4f0.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

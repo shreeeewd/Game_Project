@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_sword_swing_m.wav-0fe8b52ad8112db8d4e11b2b11cbf3ba.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_sword_swing_m.wav"
+dest_files=[ "res://.import/se_common_sword_swing_m.wav-0fe8b52ad8112db8d4e11b2b11cbf3ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

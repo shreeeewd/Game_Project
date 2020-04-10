@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_system_switch.wav-ad3bee5b25f2a453fa17260d53b6f3f5.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_system_switch.wav"
+dest_files=[ "res://.import/se_system_switch.wav-ad3bee5b25f2a453fa17260d53b6f3f5.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

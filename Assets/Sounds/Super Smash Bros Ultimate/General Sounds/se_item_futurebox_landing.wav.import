@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_futurebox_landing.wav-33d5b3f9529818e26a4343dee1cba0cd.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_futurebox_landing.wav"
+dest_files=[ "res://.import/se_item_futurebox_landing.wav-33d5b3f9529818e26a4343dee1cba0cd.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

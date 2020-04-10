@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_sandbag_landing.wav-c2ea8ad77bece1e971720ff3fa91a33d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_sandbag_landing.wav"
+dest_files=[ "res://.import/se_item_sandbag_landing.wav-c2ea8ad77bece1e971720ff3fa91a33d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_blowaway_m.wav-6ad6252d235c74edc0e305d7e3040904.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_blowaway_m.wav"
+dest_files=[ "res://.import/se_common_blowaway_m.wav-6ad6252d235c74edc0e305d7e3040904.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_spirits_critical_l_head.wav-a0bc242f55b3c46f6d33ded626c9100b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_spirits_critical_l_head.wav"
+dest_files=[ "res://.import/se_common_spirits_critical_l_head.wav-a0bc242f55b3c46f6d33ded626c9100b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

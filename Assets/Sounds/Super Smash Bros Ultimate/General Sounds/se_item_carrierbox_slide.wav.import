@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_carrierbox_slide.wav-64609484f51ab60f056641db11444788.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_carrierbox_slide.wav"
+dest_files=[ "res://.import/se_item_carrierbox_slide.wav-64609484f51ab60f056641db11444788.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

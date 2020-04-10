@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_ingame_staffroll_name2_explo.wav-0b38608f8e59742a7ffb69628a629b36.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_ingame_staffroll_name2_explo.wav"
+dest_files=[ "res://.import/se_ingame_staffroll_name2_explo.wav-0b38608f8e59742a7ffb69628a629b36.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

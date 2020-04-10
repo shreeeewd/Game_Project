@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_kusudama_break.wav-9879d5ea6452269ede54ff415e878669.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_kusudama_break.wav"
+dest_files=[ "res://.import/se_item_kusudama_break.wav-9879d5ea6452269ede54ff415e878669.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_thunder_get_01.wav-d0399f0c6fa752ec4cfd1bd1420095d7.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_thunder_get_01.wav"
+dest_files=[ "res://.import/se_thunder_get_01.wav-d0399f0c6fa752ec4cfd1bd1420095d7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

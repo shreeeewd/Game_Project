@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_stage_suddendeath_in_end.wav-9fefc4b8479d8aa50b09b3ce9831aa66.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_stage_suddendeath_in_end.wav"
+dest_files=[ "res://.import/se_common_stage_suddendeath_in_end.wav-9fefc4b8479d8aa50b09b3ce9831aa66.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

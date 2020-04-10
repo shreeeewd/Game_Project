@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MainMenu_Phantom.ogg-b1cab69cea93ea8bd560320869b3b735.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/MainMenu_Phantom.ogg"
+dest_files=[ "res://.import/MainMenu_Phantom.ogg-b1cab69cea93ea8bd560320869b3b735.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

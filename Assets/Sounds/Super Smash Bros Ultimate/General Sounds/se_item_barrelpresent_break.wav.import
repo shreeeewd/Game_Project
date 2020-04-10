@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_barrelpresent_break.wav-9a0bada0197b0ef6e294a34d64482bfb.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_barrelpresent_break.wav"
+dest_files=[ "res://.import/se_item_barrelpresent_break.wav-9a0bada0197b0ef6e294a34d64482bfb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

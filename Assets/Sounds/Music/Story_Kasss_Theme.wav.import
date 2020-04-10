@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Story_Kasss_Theme.wav-2b699272397da5f7fa651581a0eb031c.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/Story_Kasss_Theme.wav"
+dest_files=[ "res://.import/Story_Kasss_Theme.wav-2b699272397da5f7fa651581a0eb031c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

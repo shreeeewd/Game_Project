@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_roulette_circle_whiteout.wav-fd0c17935c319d9fcfbee53f3b689bfa.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_roulette_circle_whiteout.wav"
+dest_files=[ "res://.import/se_roulette_circle_whiteout.wav-fd0c17935c319d9fcfbee53f3b689bfa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

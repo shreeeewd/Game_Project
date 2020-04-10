@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_landing_rock.wav-fba355c7d4f4ce986be3bfcadfb0aacc.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_landing_rock.wav"
+dest_files=[ "res://.import/se_common_landing_rock.wav-fba355c7d4f4ce986be3bfcadfb0aacc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

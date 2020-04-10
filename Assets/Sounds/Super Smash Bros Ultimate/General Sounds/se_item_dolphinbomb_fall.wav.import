@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item_dolphinbomb_fall.wav-920bf7a789d9664c7de94273c4359248.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_item_dolphinbomb_fall.wav"
+dest_files=[ "res://.import/se_item_dolphinbomb_fall.wav-920bf7a789d9664c7de94273c4359248.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

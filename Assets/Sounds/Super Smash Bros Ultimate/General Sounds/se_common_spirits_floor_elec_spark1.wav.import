@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_common_spirits_floor_elec_spark1.wav-ff1b9d79aa1066a45960b29b41fdada8.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/General Sounds/se_common_spirits_floor_elec_spark1.wav"
+dest_files=[ "res://.import/se_common_spirits_floor_elec_spark1.wav-ff1b9d79aa1066a45960b29b41fdada8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
