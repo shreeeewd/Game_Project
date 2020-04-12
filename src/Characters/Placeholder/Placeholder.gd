@@ -3,6 +3,7 @@ extends KinematicBody2D
 var dashSpeed: = 1000.0
 var walkSpeed:= 300.0
 var dashPossible:= false
+var dash: bool
 
 var airSpeed:= 50.0
 var airLim:= false
@@ -17,25 +18,17 @@ var gravLim:= false
 var upSpecialSpeed:= -3000
 var sideSpecialSpeed:= 1500.0
 var sideSpecialCount:= 0
-var recoverySpecials:= 0
+var upSpecialCount:= 0
 
 var fastFall: = false
-var freeFall:= false
 var onGround: bool 
 const FLOOR_NORMAL: = Vector2.UP
 
-var face: String
-
-
-#Impoertant Bools
-var dash: bool
-var idle: bool
+var crouching: bool
 var crouch: bool
-var facingRight: bool
-var jumpingGround: bool
-var jumpingAir: bool
-var facingLeft: bool
+var idle:= true
 
+onready var kirito = get_node("Kirito")
 
 var velocity:= Vector2()
 
@@ -46,22 +39,25 @@ func get_input():
 			#Dash	
 			if Input.is_action_pressed("move_left") && dashPossible == true || Input.is_action_pressed("move_right") && dashPossible == true:
 				dash = true
-
+				
 				#Left
 			if Input.is_action_pressed("move_left") && crouch == false && dash == false:
 				velocity.x = -walkSpeed
-				facingRight = false
+				get_node('Kirito').set_scale(Vector2(-1, 1))
+				
 			elif Input.is_action_pressed("move_left") && crouch == false && dash == true:
 				velocity.x = -dashSpeed
-				facingRight = false
+				get_node('Kirito').set_scale(Vector2(-1, 1))
 
 				#Right
 			elif Input.is_action_pressed("move_right") && crouch == false && dash == false:
 				velocity.x = walkSpeed
-				facingRight = true
+				get_node('Kirito').set_scale(Vector2(1, 1))
+
 			elif Input.is_action_pressed("move_right") && crouch == false && dash == true:
 				velocity.x = dashSpeed
-				facingRight = true
+				get_node('Kirito').set_scale(Vector2(1, 1))
+
 
 			#Slowdown
 			else:
@@ -81,12 +77,12 @@ func get_input():
 					velocity.x = velocity.x + 50
 	
 		#Jump
-		if Input.is_action_just_pressed("jump") && jumpCount == 2 && freeFall == false:
+		if Input.is_action_just_pressed("jump") && jumpCount == 2:
 			velocity.y = jumpHeight
 			jumpCount = 1
 			onGround = false
 			fastFall = false
-		elif Input.is_action_just_pressed("jump") && jumpCount == 1 && freeFall == false:
+		elif Input.is_action_just_pressed("jump") && jumpCount == 1:
 				velocity.y = doubleJumpHeight
 				jumpCount = 0
 				onGround = false
@@ -102,54 +98,59 @@ func get_input():
 				velocity.y = velocity.y + 500
 				fastFall = true
 		
-		if Input.is_action_just_released("down"):
+		if crouch == true:
+			if Input.is_action_just_pressed("left"):
+				get_node('Kirito').set_scale(Vector2(-1, 1))
+			elif Input.is_action_just_pressed("right"):
+				get_node('Kirito').set_scale(Vector2(1, 1))
+
+		if Input.is_action_just_released("down") || onGround == false || velocity.y != 0:
 			crouch = false
 		
 	
 		#Specials
 			#Recovery
 				#Up Special
-		if Input.is_action_pressed("up") && Input.is_action_just_pressed("special") && freeFall == false:
+		if Input.is_action_pressed("up") && Input.is_action_just_pressed("special") && upSpecialCount == 0:
 			velocity.y = upSpecialSpeed
 			fastFall = false
-			recoverySpecials += 1
+			upSpecialCount = 1
 		
 		if velocity.y != 0:		#Side Specials
-			if Input.is_action_pressed("right") && Input.is_action_just_pressed("special") && sideSpecialCount == 0 && freeFall == false:
+			if Input.is_action_pressed("right") && Input.is_action_just_pressed("special") && sideSpecialCount == 0:
 				velocity.x = sideSpecialSpeed
 				velocity.y = jumpHeight
 				fastFall = false
 				sideSpecialCount = 1
-				recoverySpecials += 1
-				facingRight = true
-			elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special") && sideSpecialCount == 0 && freeFall == false:
+				get_node('Kirito').set_scale(Vector2(1, 1))
+
+			elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special") && sideSpecialCount == 0:
 					velocity.x = -sideSpecialSpeed
 					velocity.y = jumpHeight
 					fastFall = false
 					sideSpecialCount = 1
-					recoverySpecials += 1
-					facingRight = false
+					get_node('Kirito').set_scale(Vector2(-1, 1))
+
 		else:
 			if Input.is_action_pressed("right") && Input.is_action_just_pressed("special"):
 				velocity.y = jumpHeight/2
 				velocity.x = sideSpecialSpeed
-				facingRight = true
+				get_node('Kirito').set_scale(Vector2(1, 1))
+
 			elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special"):
 					velocity.x = -sideSpecialSpeed
 					velocity.y = jumpHeight/2
-					facingRight = false
-					
-		if recoverySpecials == 2:
-			freeFall = true		
+					get_node('Kirito').set_scale(Vector2(-1, 1))
+
+
 
 
 		#Reset Things
 		if is_on_floor():
 			onGround = true
 			jumpCount = 2
-			freeFall = false
 			sideSpecialCount = 0
-			recoverySpecials = 0
+			upSpecialCount = 0
 			airSpeed = 10.0
 			dash = false
 		else: #not on floor
@@ -166,6 +167,7 @@ func get_input():
 			dashPossible = false
 			dash = false
 
+			
 
 		#Gravity
 		if onGround == false && gravLim == false:

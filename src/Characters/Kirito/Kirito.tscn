@@ -1,17 +1,181 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/Characters/Kirito/Kirito.gd" type="Script" id=1]
+[ext_resource path="res://src/Characters/Placeholder/Placeholder.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Textures-Sprites/Actors/Kirito/kiritoWIP.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 97.257, 127.622 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 84.1799, 116.253 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "Crouch"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionBox:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionBox:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 29, -2.5 ), Vector2( 29, 61 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hitbox:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 35, 0 ), Vector2( 35, 61 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Kirito:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.5 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Kirito:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 61 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "unCrouch"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CollisionBox:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 29, 61 ), Vector2( 29, -2.5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionBox:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 35, 61 ), Vector2( 35, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hitbox:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Kirito:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 0.5 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Kirito:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 61 ), Vector2( 0, 0 ) ]
+}
 
 [node name="Kirito" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Kirito" type="Sprite" parent="."]
+texture = ExtResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2( 1.5, 1.5 )
+[node name="CollisionBox" type="CollisionShape2D" parent="."]
+position = Vector2( 29, -2.5 )
+shape = SubResource( 1 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+modulate = Color( 0.12549, 0, 1, 1 )
+position = Vector2( 35, 0 )
+shape = SubResource( 2 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
-[node name="AnimationTree" type="AnimationTree" parent="."]
+anims/Crouch = SubResource( 3 )
+anims/unCrouch = SubResource( 4 )
