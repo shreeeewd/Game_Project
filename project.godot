@@ -16,8 +16,16 @@ _global_script_class_icons={
 [application]
 
 config/name="GameProject"
-run/main_scene="res://src/Hud-MenuElements/OpeningScreen.tscn"
+run/main_scene="res://src/Hud-MenuElements/Level One.tscn"
 config/icon="res://icon.png"
+
+[collision]
+
+fps/force_fps=false
+
+[debug]
+
+settings/fps/force_fps=60
 
 [display]
 
@@ -135,11 +143,19 @@ menu_back={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":10,"pressure":0.0,"pressed":false,"script":null)
  ]
 }
+self_damage={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777220,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [layer_names]
 
 2d_physics/layer_1="characters"
 2d_physics/layer_2="stages"
+2d_physics/layer_3="weapons"
+2d_physics/layer_4="enemies"
+2d_physics/layer_5="destructable"
 
 [rendering]
 

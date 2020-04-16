@@ -7,5 +7,5 @@ func _process(delta: float) -> void:
 		get_node("AnimationPlayer").play("fadeIn")
 		transitionIn = true
 		
-	if Input.is_action_just_pressed("attack"):
+	if Input.is_action_just_pressed("menu_back"):
 		get_node("AnimationPlayer").play("fadeBack")

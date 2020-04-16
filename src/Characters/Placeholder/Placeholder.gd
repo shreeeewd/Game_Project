@@ -26,9 +26,8 @@ const FLOOR_NORMAL: = Vector2.UP
 
 var crouching: bool
 var crouch: bool
+var isCrouching: bool
 var idle:= true
-
-onready var kirito = get_node("Kirito")
 
 var velocity:= Vector2()
 
@@ -91,21 +90,26 @@ func get_input():
 				airSpeed = 75.0
 	
 		#Crouch/FastFall
-		if Input.is_action_pressed("down") && onGround == true:
+		if Input.is_action_just_pressed("down") && onGround == true:
 			velocity = Vector2(0,0)
-			crouch = true
+			crouching = true
+			isCrouching = false
 		elif Input.is_action_just_pressed("down") && onGround == false  && fastFall == false:
 				velocity.y = velocity.y + 500
 				fastFall = true
-		
-		if crouch == true:
-			if Input.is_action_just_pressed("left"):
-				get_node('Kirito').set_scale(Vector2(-1, 1))
-			elif Input.is_action_just_pressed("right"):
-				get_node('Kirito').set_scale(Vector2(1, 1))
-
-		if Input.is_action_just_released("down") || onGround == false || velocity.y != 0:
+			
+		if Input.is_action_just_released("down") || onGround == false:
+			crouching = false
+			
+		if crouching == true && isCrouching == false:
+			get_node("AnimationPlayer").play("Crouch")
+			crouch = true
+			isCrouching = true
+	
+		if crouch == true && Input.is_action_just_released("down"):
 			crouch = false
+			isCrouching = false
+			get_node("AnimationPlayer").play("unCrouch")
 		
 	
 		#Specials
@@ -192,3 +196,8 @@ func _physics_process(_delta: float) -> void:
 	get_input()
 
 	velocity = move_and_slide(velocity,FLOOR_NORMAL)
+
+
+# warning-ignore:unused_argument
+func _on_AnimationPlayer_animation_finished(rollRight"") -> void:
+	pass # Replace with function body.

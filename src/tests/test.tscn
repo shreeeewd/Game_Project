@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Textures-Sprites/Tilesets/tileset.png" type="Texture" id=1]
-[ext_resource path="res://src/Characters/Placeholder/Placeholder.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Characters/Kirito/Kirito.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Stages/FD.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -48,10 +48,15 @@ points = PoolVector2Array( 0, 80, 80, 0, 80, 80 )
 
 [node name="Test2" type="Node2D"]
 
-[node name="Placeholder" parent="." instance=ExtResource( 2 )]
-position = Vector2( -1352, 136 )
-rotation = -1.5708
-scale = Vector2( 0.75, 0.75 )
+[node name="Kirito" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1578.72, 102.96 )
+
+[node name="Camera2D" type="Camera2D" parent="Kirito"]
+current = true
+zoom = Vector2( 2, 2 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
