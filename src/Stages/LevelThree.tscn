@@ -223,10 +223,10 @@ points = PoolVector2Array( 128, 256, 0, 256, 0, 0, 128, 0 )
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 820.312, 173.535 )
 
-[sub_resource type="RectangleShape2D" id=24]
+[sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 8455.86, 1838.06 )
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=22]
 resource_name = "fade"
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:modulate")
@@ -255,7 +255,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=23]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:modulate")
@@ -354,14 +354,13 @@ physics_process_parent = true
 [node name="deathbarrier" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="deathbarrier"]
-position = Vector2( 8637.84, 4306.23 )
-shape = SubResource( 24 )
+position = Vector2( 8710.35, 6771.44 )
+shape = SubResource( 21 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 0 )
 margin_top = -1869.64
 margin_right = 20790.0
@@ -373,9 +372,9 @@ __meta__ = {
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/death = ExtResource( 18 )
-anims/fade = SubResource( 23 )
+anims/fade = SubResource( 22 )
 anims/fadeBack = ExtResource( 6 )
-anims/fadeIn = SubResource( 22 )
+anims/fadeIn = SubResource( 23 )
 anims/misc = ExtResource( 17 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
