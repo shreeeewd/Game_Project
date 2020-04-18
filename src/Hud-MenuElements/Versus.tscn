@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Hud-MenuElements/Versus.gd" type="Script" id=1]
 [ext_resource path="res://src/Hud-MenuElements/MenuBackground.tscn" type="PackedScene" id=2]
@@ -9,7 +9,35 @@
 [ext_resource path="res://Assets/Sounds/Music/Versus_Final-Destination.ogg" type="AudioStream" id=7]
 
 [sub_resource type="Animation" id=1]
-resource_name = "fadeIn"
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("ColorRect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "next"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
@@ -40,7 +68,7 @@ autoplay = true
 stream = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color( 0, 0, 0, 0.784314 )
+modulate = Color( 0, 0, 0, 0 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 1280.0
@@ -52,5 +80,6 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 1 )
 anims/fadeBack = ExtResource( 4 )
-anims/fadeIn = SubResource( 1 )
+anims/fadeIn = SubResource( 2 )

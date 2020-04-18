@@ -20,7 +20,7 @@ length = 0.800002
 loop = true
 step = 0.0166667
 tracks/0/type = "value"
-tracks/0/path = NodePath("../US Soldier/US Soldier:texture")
+tracks/0/path = NodePath("US Soldier:texture")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -32,7 +32,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("../US Soldier/AudioStreamPlayer:playing")
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -44,7 +44,7 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("../US Soldier/Bullet:visible")
+tracks/2/path = NodePath("Bullet:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -56,7 +56,7 @@ tracks/2/keys = {
 "values": [ false, true ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("../US Soldier/Bullet:position")
+tracks/3/path = NodePath("Bullet:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -140,9 +140,10 @@ collision_layer = 8
 [node name="Hitbox" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 704.941, 1.38702 )
 shape = SubResource( 5 )
+disabled = true
 
 [node name="Bullet" type="KinematicBody2D" parent="."]
-position = Vector2( 237.492, -18 )
+position = Vector2( 739.471, -18 )
 __meta__ = {
 "_edit_group_": true
 }

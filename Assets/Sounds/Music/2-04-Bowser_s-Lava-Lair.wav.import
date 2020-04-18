@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/2-04-Bowser_s-Lava-Lair.wav-dc4e2035756c3d5b8d030c050523b411.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Music/2-04-Bowser_s-Lava-Lair.wav"
+dest_files=[ "res://.import/2-04-Bowser_s-Lava-Lair.wav-dc4e2035756c3d5b8d030c050523b411.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

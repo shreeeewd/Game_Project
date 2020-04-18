@@ -284,6 +284,10 @@ func healthbar():
 		lifeBar.set_texture(health9)
 	elif percent > 90 && percent < 100:
 		lifeBar.set_texture(health10)
+	elif percent >100:
+		lifeBar.set_texture(health11)
+		get_node("AnimationPlayer2").play("Death")
+		allow = false
 
 
 func attacks():

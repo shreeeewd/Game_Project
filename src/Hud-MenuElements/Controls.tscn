@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://src/Hud-MenuElements/MenuBackground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Hud-MenuElements/Controls.gd" type="Script" id=2]
@@ -10,7 +10,47 @@
 [ext_resource path="res://src/Stages/Tutorial.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
-resource_name = "fadeIn"
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("ColorRect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "next"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("song man:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:modulate")
 tracks/0/interp = 1
@@ -72,7 +112,7 @@ autoplay = true
 stream = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-modulate = Color( 0, 0, 0, 0.784314 )
+modulate = Color( 0, 0, 0, 0.4 )
 margin_left = -4679.13
 margin_top = -4016.31
 margin_right = 36003.9
@@ -84,5 +124,6 @@ __meta__ = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade = SubResource( 1 )
 anims/fadeBack = ExtResource( 4 )
-anims/fadeIn = SubResource( 1 )
+anims/fadeIn = SubResource( 2 )

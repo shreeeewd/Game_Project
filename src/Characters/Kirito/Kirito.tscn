@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=122 format=2]
 
 [ext_resource path="res://src/Characters/Kirito/Kirito.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Textures-Sprites/Actors/Kirito/kiritoWIP.png" type="Texture" id=2]
@@ -71,6 +71,7 @@
 [ext_resource path="res://Assets/Textures-Sprites/Actors/Kirito/Animations/SideSpecial/sideB4.png" type="Texture" id=69]
 [ext_resource path="res://Assets/Textures-Sprites/Actors/Kirito/Animations/SideSpecial/sideB1.png" type="Texture" id=70]
 [ext_resource path="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Chrom/vc_chrom/vc_chrom_attack06.wav" type="AudioStream" id=71]
+[ext_resource path="res://src/Hud-MenuElements/Transition.gd" type="Script" id=72]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 97.3722, 126.588 )
@@ -87,10 +88,10 @@ extents = Vector2( 110.466, 75.9216 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 74.0552, 44.306 )
 
-[sub_resource type="RectangleShape2D" id=26]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 93.1291, 28.4588 )
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 length = 0.2
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -170,7 +171,7 @@ tracks/5/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 length = 0.0166667
 loop = true
 step = 0.0166667
@@ -187,8 +188,7 @@ tracks/0/keys = {
 "values": [ ExtResource( 64 ) ]
 }
 
-[sub_resource type="Animation" id=8]
-resource_name = "Dash"
+[sub_resource type="Animation" id=9]
 length = 0.533333
 loop = true
 step = 0.0166667
@@ -241,10 +241,9 @@ tracks/3/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=9]
-resource_name = "Double Jump"
-
 [sub_resource type="Animation" id=10]
+
+[sub_resource type="Animation" id=11]
 length = 0.5
 loop = true
 step = 0.0166667
@@ -275,7 +274,7 @@ tracks/1/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=12]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -317,7 +316,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=13]
 length = 0.22
 step = 0.02
 tracks/0/type = "value"
@@ -386,7 +385,7 @@ tracks/4/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=13]
+[sub_resource type="Animation" id=14]
 length = 0.25
 step = 0.0166667
 tracks/0/type = "value"
@@ -454,7 +453,7 @@ tracks/4/keys = {
 "values": [ true ]
 }
 
-[sub_resource type="Animation" id=14]
+[sub_resource type="Animation" id=15]
 length = 0.1
 step = 0.0166667
 tracks/0/type = "value"
@@ -513,7 +512,7 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 length = 0.416667
 step = 0.0166667
 tracks/0/type = "value"
@@ -529,7 +528,7 @@ tracks/0/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=16]
+[sub_resource type="Animation" id=17]
 length = 0.0166667
 loop = true
 step = 0.0166667
@@ -571,7 +570,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=27]
+[sub_resource type="Animation" id=18]
 resource_name = "SideSpecial"
 length = 0.583333
 step = 0.0166667
@@ -667,7 +666,7 @@ tracks/6/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=17]
+[sub_resource type="Animation" id=19]
 length = 0.583333
 step = 0.0166667
 tracks/0/type = "value"
@@ -726,7 +725,7 @@ tracks/3/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=20]
 loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Kirito:texture")
@@ -753,11 +752,10 @@ tracks/1/keys = {
 "values": [ true, true ]
 }
 
-[sub_resource type="Animation" id=25]
+[sub_resource type="Animation" id=21]
 resource_name = "death"
 
-[sub_resource type="Animation" id=19]
-resource_name = "doubleJump"
+[sub_resource type="Animation" id=22]
 length = 0.4
 step = 0.0166667
 tracks/0/type = "value"
@@ -799,7 +797,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=20]
+[sub_resource type="Animation" id=23]
 step = 0.0166667
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -905,7 +903,7 @@ tracks/7/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=21]
+[sub_resource type="Animation" id=24]
 step = 0.0166667
 tracks/0/type = "method"
 tracks/0/path = NodePath(".")
@@ -1011,7 +1009,7 @@ tracks/7/keys = {
 "values": [ true, false ]
 }
 
-[sub_resource type="Animation" id=22]
+[sub_resource type="Animation" id=25]
 length = 0.333333
 step = 0.0166667
 tracks/0/type = "value"
@@ -1056,7 +1054,7 @@ tracks/2/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=23]
+[sub_resource type="Animation" id=26]
 length = 0.133333
 step = 0.0166667
 tracks/0/type = "method"
@@ -1163,7 +1161,1141 @@ tracks/7/keys = {
 } ]
 }
 
-[sub_resource type="Animation" id=24]
+[sub_resource type="Animation" id=27]
+length = 0.0166667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "unShield"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Kirito:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0166667 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "Crouch"
+length = 0.2
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionBox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox/Hurtbox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionBox2:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Hitbox2/Hurtbox2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Crouch:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=29]
+length = 0.0166667
+loop = true
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 64 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "Dash"
+length = 0.533333
+loop = true
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.133333, 0.266667, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 42 ), ExtResource( 44 ), ExtResource( 41 ), ExtResource( 43 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Dust:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.166667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Dust:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.0666667, 0.1, 0.133333 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 47 ), ExtResource( 45 ), ExtResource( 46 ), ExtResource( 48 ), ExtResource( 49 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Dash:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0833333 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "Death"
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("ColorRect")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "death"
+} ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "Double Jump"
+
+[sub_resource type="Animation" id=33]
+length = 0.5
+loop = true
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.266667, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ), ExtResource( 36 ), ExtResource( 38 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 0.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 14 ), ExtResource( 12 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Dust:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+
+[sub_resource type="Animation" id=35]
+length = 0.22
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.0666667, 0.2, 0.22 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Jab/Hitbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0333333, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.22 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Jabbing:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.22 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("JabVoice:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.04, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=36]
+length = 0.25
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 35 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 32 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "jumping"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Dust:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0166667 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Jumping:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.0666667 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=37]
+length = 0.1
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 40 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.0833333 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "land"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Landing:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.0166667, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 0.416667
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shielding:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.416667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=39]
+length = 0.0166667
+loop = true
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Kirito:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "SideSpecial"
+length = 0.583333
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.166667, 0.25, 0.466667 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 70 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 67 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SideSpecial/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.466667 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.583333 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "jumping"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.583333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SideSpecialSound:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.383333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SideSpecialVoice:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.383333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("DoubleJump:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.516667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=41]
+length = 0.583333
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.133333, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 59 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.533333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.583333 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "upSpecial"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("UpSpecial:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.566667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=42]
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Walking:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "death"
+
+[sub_resource type="Animation" id=44]
+resource_name = "doubleJump"
+length = 0.4
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.133333 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 60 ), ExtResource( 61 ), ExtResource( 59 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DoubleJump:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "jumping"
+} ]
+}
+
+[sub_resource type="Animation" id=45]
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "rollLeft"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox/Hurtbox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.866667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Kirito:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6, 0.666667, 0.733333, 0.8, 0.866667, 0.933335, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 15 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Kirito:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CollisionBox:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.866668 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CollisionBox2:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.866668 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("RollStart:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.733335 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=46]
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "rollRight"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Hitbox/Hurtbox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.2, 0.866667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Kirito:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.0666667, 0.133333, 0.2, 0.266667, 0.333333, 0.4, 0.466667, 0.533333, 0.6, 0.666667, 0.733333, 0.8, 0.866667, 0.933335, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ), ExtResource( 21 ), ExtResource( 15 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 22 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 15 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Kirito:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CollisionBox:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.866668 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CollisionBox2:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.866668 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("RollStart:playing")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.166667, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.333333
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/path = NodePath("Kirito:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.0833333, 0.266667 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ), ExtResource( 30 ), ExtResource( 31 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Hitbox/Hurtbox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.0833333, 0.266667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.316667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+
+[sub_resource type="Animation" id=48]
+length = 0.133333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.116667 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [  ],
+"method": "cantMove"
+}, {
+"args": [  ],
+"method": "canMove"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionBox2:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CollisionBox:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Hitbox/Hurtbox:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Hitbox2/Hurtbox2:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.0833333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Crouch:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.133333 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Kirito:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.116667 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 65 ) ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "unCrouch"
+} ]
+}
+
+[sub_resource type="Animation" id=49]
 length = 0.0166667
 step = 0.0166667
 tracks/0/type = "method"
@@ -1199,7 +2331,7 @@ collision_mask = 31
 script = ExtResource( 1 )
 
 [node name="Kirito" type="Sprite" parent="."]
-texture = ExtResource( 67 )
+texture = ExtResource( 64 )
 
 [node name="CollisionBox" type="CollisionShape2D" parent="."]
 position = Vector2( 29, -2 )
@@ -1241,7 +2373,7 @@ collision_layer = 4
 collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SideSpecial"]
-shape = SubResource( 26 )
+shape = SubResource( 6 )
 disabled = true
 
 [node name="LifeBar" type="Sprite" parent="."]
@@ -1255,27 +2387,62 @@ position = Vector2( -180, 115 )
 texture = ExtResource( 49 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Crouch = SubResource( 6 )
-anims/Crouching = SubResource( 7 )
-anims/Dash = SubResource( 8 )
-"anims/Double Jump" = SubResource( 9 )
-anims/Falling = SubResource( 10 )
-anims/Idle = SubResource( 11 )
-anims/Jab = SubResource( 12 )
-anims/Jump = SubResource( 13 )
-anims/Landing = SubResource( 14 )
-anims/Shield = SubResource( 15 )
-anims/Shielding = SubResource( 16 )
-anims/SideSpecial = SubResource( 27 )
-anims/UpSpecial = SubResource( 17 )
-anims/Walk = SubResource( 18 )
-anims/death = SubResource( 25 )
-anims/doubleJump = SubResource( 19 )
-anims/rollLeft = SubResource( 20 )
-anims/rollRight = SubResource( 21 )
-anims/spotDodge = SubResource( 22 )
-anims/unCrouch = SubResource( 23 )
-anims/unShield = SubResource( 24 )
+anims/Crouch = SubResource( 7 )
+anims/Crouching = SubResource( 8 )
+anims/Dash = SubResource( 9 )
+"anims/Double Jump" = SubResource( 10 )
+anims/Falling = SubResource( 11 )
+anims/Idle = SubResource( 12 )
+anims/Jab = SubResource( 13 )
+anims/Jump = SubResource( 14 )
+anims/Landing = SubResource( 15 )
+anims/Shield = SubResource( 16 )
+anims/Shielding = SubResource( 17 )
+anims/SideSpecial = SubResource( 18 )
+anims/UpSpecial = SubResource( 19 )
+anims/Walk = SubResource( 20 )
+anims/death = SubResource( 21 )
+anims/doubleJump = SubResource( 22 )
+anims/rollLeft = SubResource( 23 )
+anims/rollRight = SubResource( 24 )
+anims/spotDodge = SubResource( 25 )
+anims/unCrouch = SubResource( 26 )
+anims/unShield = SubResource( 27 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -2200.17
+margin_top = -1333.01
+margin_right = 2466.83
+margin_bottom = 1424.99
+color = Color( 0, 0, 0, 0 )
+script = ExtResource( 72 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+anims/Crouch = SubResource( 28 )
+anims/Crouching = SubResource( 29 )
+anims/Dash = SubResource( 30 )
+anims/Death = SubResource( 31 )
+"anims/Double Jump" = SubResource( 32 )
+anims/Falling = SubResource( 33 )
+anims/Idle = SubResource( 34 )
+anims/Jab = SubResource( 35 )
+anims/Jump = SubResource( 36 )
+anims/Landing = SubResource( 37 )
+anims/Shield = SubResource( 38 )
+anims/Shielding = SubResource( 39 )
+anims/SideSpecial = SubResource( 40 )
+anims/UpSpecial = SubResource( 41 )
+anims/Walk = SubResource( 42 )
+anims/death = SubResource( 43 )
+anims/doubleJump = SubResource( 44 )
+anims/rollLeft = SubResource( 45 )
+anims/rollRight = SubResource( 46 )
+anims/spotDodge = SubResource( 47 )
+anims/unCrouch = SubResource( 48 )
+anims/unShield = SubResource( 49 )
 
 [node name="SideSpecialSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 63 )
