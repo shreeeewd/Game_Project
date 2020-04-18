@@ -1,0 +1,9 @@
+metadata for E:\Models - Switch\Super Smash Bros Ultimate\_update\v300\root\sound\idsp\se_jack\se_jack_special_L08.IDSP
+sample rate: 37998 Hz
+channels: 1
+loop start: 0 samples (0.0000 seconds)
+loop end: 62664 samples (1.6491 seconds)
+stream total samples: 62664 (1.6491 seconds)
+encoding: Nintendo DSP 4-bit ADPCM
+layout: flat (no layout)
+metadata from: Nintendo IDSP Header

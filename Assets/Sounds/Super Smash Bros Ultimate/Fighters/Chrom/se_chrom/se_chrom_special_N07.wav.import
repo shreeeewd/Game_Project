@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_chrom_special_N07.wav-0ab98d94d8bc7e7a61875f422e477c76.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Chrom/se_chrom/se_chrom_special_N07.wav"
+dest_files=[ "res://.import/se_chrom_special_N07.wav-0ab98d94d8bc7e7a61875f422e477c76.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

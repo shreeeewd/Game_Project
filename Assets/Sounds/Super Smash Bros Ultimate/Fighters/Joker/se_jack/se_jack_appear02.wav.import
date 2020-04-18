@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_jack_appear02.wav-ef7707cc139c9f5e27d896a8ecfab5aa.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/se_jack/se_jack_appear02.wav"
+dest_files=[ "res://.import/se_jack_appear02.wav-ef7707cc139c9f5e27d896a8ecfab5aa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

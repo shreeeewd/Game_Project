@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_jack_cloth_l01.wav-10ef4b96644e5a88ed97571dfef5c8ba.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/se_jack/se_jack_cloth_l01.wav"
+dest_files=[ "res://.import/se_jack_cloth_l01.wav-10ef4b96644e5a88ed97571dfef5c8ba.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

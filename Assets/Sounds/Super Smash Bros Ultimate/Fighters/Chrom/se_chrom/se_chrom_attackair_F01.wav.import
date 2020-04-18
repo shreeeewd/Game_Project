@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_chrom_attackair_F01.wav-224d1c8bef4d79468af7f74e6bb4ddca.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/se_chrom/se_chrom_attackair_F01.wav"
+dest_files=[ "res://.import/se_chrom_attackair_F01.wav-224d1c8bef4d79468af7f74e6bb4ddca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

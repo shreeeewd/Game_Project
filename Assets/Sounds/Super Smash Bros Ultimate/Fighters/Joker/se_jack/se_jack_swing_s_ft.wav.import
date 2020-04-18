@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_jack_swing_s_ft.wav-8c1d38b31c3ed21c43fead235f80990a.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/se_jack/se_jack_swing_s_ft.wav"
+dest_files=[ "res://.import/se_jack_swing_s_ft.wav-8c1d38b31c3ed21c43fead235f80990a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

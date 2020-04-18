@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vc_pit_missfoot02.wav-aac203e750ef990b29c9888751210448.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Pit/vc_pit_JP/vc_pit_missfoot02.wav"
+dest_files=[ "res://.import/vc_pit_missfoot02.wav-aac203e750ef990b29c9888751210448.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

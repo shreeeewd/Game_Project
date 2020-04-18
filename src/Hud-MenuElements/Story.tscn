@@ -7,7 +7,7 @@
 [ext_resource path="res://src/Hud-MenuElements/fadeBack.tres" type="Animation" id=5]
 [ext_resource path="res://Assets/Sounds/Super Smash Bros Ultimate/Menu Sounds/select.wav" type="AudioStream" id=6]
 [ext_resource path="res://src/Hud-MenuElements/Transition.gd" type="Script" id=7]
-[ext_resource path="res://src/Hud-MenuElements/Level One.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Stages/Level One.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fadeIn"
@@ -71,14 +71,13 @@ autoplay = true
 stream = ExtResource( 6 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 0.784314 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -4289.0
-margin_top = -9555.0
-margin_right = 19209.0
-margin_bottom = 2393.0
+margin_left = -4307.61
+margin_top = -9536.39
+margin_right = 19190.4
+margin_bottom = 2411.61
 color = Color( 0, 0, 0, 1 )
 script = ExtResource( 7 )
 __meta__ = {

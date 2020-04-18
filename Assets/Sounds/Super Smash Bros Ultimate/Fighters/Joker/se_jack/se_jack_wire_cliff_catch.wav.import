@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_jack_wire_cliff_catch.wav-1c28df413b6516d52e794c0a676d5d77.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/se_jack/se_jack_wire_cliff_catch.wav"
+dest_files=[ "res://.import/se_jack_wire_cliff_catch.wav-1c28df413b6516d52e794c0a676d5d77.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

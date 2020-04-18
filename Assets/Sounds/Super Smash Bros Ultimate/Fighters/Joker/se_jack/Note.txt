@@ -1,0 +1,18 @@
+The following sounds are muted for the "uniform" costumes:
+se_jack_appeal_H04
+se_jack_appeal_L02
+se_jack_appear02
+se_jack_cloth_l01
+se_jack_cloth_l01_dashstop
+se_jack_cloth_l02
+se_jack_cloth_l03
+se_jack_cloth_m01
+se_jack_cloth_m02
+se_jack_cloth_m03
+se_jack_cloth_m03_delay
+se_jack_cloth_s01
+se_jack_cloth_s02
+se_jack_cloth_s03
+se_jack_cloth_step01
+se_jack_cloth_step02
+se_jack_cloth_step03

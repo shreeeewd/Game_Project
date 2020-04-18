@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/downAir.wav-bdc8bb99c9fd9945d66f1b779660fe63.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Chrom/se_chrom/downAir.wav"
+dest_files=[ "res://.import/downAir.wav-bdc8bb99c9fd9945d66f1b779660fe63.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

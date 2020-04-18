@@ -24,21 +24,21 @@ var fastFall: = false
 var onGround: bool 
 const FLOOR_NORMAL: = Vector2.UP
 
+var crouchSound:= false
 var crouch:= false
-var isCrouching:= false
-var canRoll:= false
-var isRolling:= false
 
+var shieldSound:= false
 var shield:= false
-var isShielding:= false
 
+var damageMutltiplier:= 1.0
 
 var idle:= true
 var facingRight:= true
 var allow:= true
+var airborne:= false
 
 var percent: = 0.0
-var canTakeDamage:= true
+
 
 var velocity:= Vector2()
 
@@ -76,7 +76,7 @@ func get_input():
 				elif Input.is_action_pressed("move_left") && crouch == false && dash == true:
 					velocity.x = -dashSpeed
 					facingRight = false
-
+					get_node("AnimationPlayer").play("Dash")
 					#Right
 				elif Input.is_action_pressed("move_right") && crouch == false && dash == false:
 					velocity.x = walkSpeed
@@ -86,6 +86,7 @@ func get_input():
 				elif Input.is_action_pressed("move_right") && crouch == false && dash == true:
 					velocity.x = dashSpeed
 					facingRight = true	
+					get_node("AnimationPlayer").play("Dash")
 
 				#Slowdown
 				else:
@@ -111,6 +112,7 @@ func get_input():
 				jumpCount = 1
 				onGround = false
 				fastFall = false
+				get_node("AnimationPlayer").play("Jump")
 			elif Input.is_action_just_pressed("jump") && jumpCount == 1 && crouch == false:
 					velocity.y = doubleJumpHeight
 					jumpCount = 0
@@ -118,10 +120,34 @@ func get_input():
 					fastFall = false
 					velocity.x = 0
 					airSpeed = 75.0
+					get_node("AnimationPlayer").play("doubleJump")
 			
+			# if onGround == false && velocity.y != 0:
+			# 	get_node("AnimationPlayer").play("Falling")
+				
+
+			if jumpCount != 2:
+				airborne = true
+
+
+			if airborne == true && onGround == true:
+				get_node("AnimationPlayer").play("Landing")
+			
+
+
 			#Crouch/FastFall
-			if Input.is_action_pressed("down") && velocity.y == 0:
-				crouch = true		
+			if Input.is_action_pressed("down") && shield == false && velocity.y == 0:
+				crouch = true	
+				get_node("AnimationPlayer").play("Crouching")
+				if crouchSound == false:
+					get_node("AnimationPlayer").play("Crouch")
+					crouchSound = true
+					velocity = Vector2(0,0)
+			if Input.is_action_just_released("down") && crouch == true:
+				get_node("AnimationPlayer").play("unCrouch")
+				crouch = false
+				crouchSound = false
+				
 			elif Input.is_action_just_pressed("down") && velocity.y != 0 && fastFall == false:
 				velocity.y = velocity.y + 500
 				fastFall = true
@@ -131,12 +157,14 @@ func get_input():
 				#Recovery
 					#Up Special
 			if Input.is_action_pressed("up") && Input.is_action_just_pressed("special") && upSpecialCount == 0:
+				get_node("AnimationPlayer").play("UpSpecial")
 				velocity.y = upSpecialSpeed
 				fastFall = false
 				upSpecialCount = 1
 			
 			if velocity.y != 0:		#Side Specials
 				if Input.is_action_pressed("right") && Input.is_action_just_pressed("special") && sideSpecialCount == 0:
+					get_node("AnimationPlayer").play("SideSpecial")
 					velocity.x = sideSpecialSpeed
 					velocity.y = jumpHeight
 					fastFall = false
@@ -144,6 +172,7 @@ func get_input():
 					facingRight = true
 
 				elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special") && sideSpecialCount == 0:
+						get_node("AnimationPlayer").play("SideSpecial")
 						velocity.x = -sideSpecialSpeed
 						velocity.y = jumpHeight
 						fastFall = false
@@ -151,14 +180,20 @@ func get_input():
 						facingRight = false
 			else:
 				if Input.is_action_pressed("right") && Input.is_action_just_pressed("special"):
+					get_node("AnimationPlayer").play("SideSpecial")
 					velocity.y = jumpHeight/2
 					velocity.x = sideSpecialSpeed
 					facingRight = true
 
 				elif Input.is_action_pressed("left") && Input.is_action_just_pressed("special"):
+						get_node("AnimationPlayer").play("SideSpecial")
 						velocity.x = -sideSpecialSpeed
 						velocity.y = jumpHeight/2
 						facingRight = false
+
+			if Input.is_action_just_pressed("self_damage"):
+				percent += 9
+					
 			
 
 		
@@ -167,17 +202,22 @@ func get_input():
 			get_node('CollisionBox').set_position(Vector2(29,-2))
 			get_node('Hitbox').set_position(Vector2(29,-2))
 			get_node('Jab').set_position(Vector2(107,-3))
-		else:
+			get_node("Hitbox2").set_position(Vector2(29,60))
+			get_node("CollisionBox2").set_position(Vector2(29,65))
+			get_node("Dust").set_position(Vector2(-180,115))
+			get_node('Dust').set_scale(Vector2(1, 1))
+			get_node("SideSpecial").set_position(Vector2(87, -18))
+		elif facingRight == false:
 			get_node('Kirito').set_scale(Vector2(-1, 1))
 			get_node('CollisionBox').set_position(Vector2(-29,-2))
 			get_node('Hitbox').set_position(Vector2(-29,-2))
 			get_node('Jab').set_position(Vector2(-107,-3))
-		
-		#Cruching Continued...
-		if crouch == true && isCrouching == false:
-			get_node("AnimationPlayer").play("Crouch")
-			velocity = Vector2(0,0)
-			isCrouching = true
+			get_node("Hitbox2").set_position(Vector2(-29,60))
+			get_node("CollisionBox2").set_position(Vector2(-29,65))
+			get_node("Dust").set_position(Vector2(180,115))
+			get_node('Dust').set_scale(Vector2(-1, 1))
+			get_node("SideSpecial").set_position(Vector2(-87, -18))
+
 		
 
 		#Reset Things
@@ -188,7 +228,7 @@ func get_input():
 			upSpecialCount = 0
 			airSpeed = 10.0
 			dash = false
-		else: #not on floor
+		else:
 			onGround = false
 			if jumpCount == 2 && velocity.y != 0:
 				jumpCount = 1
@@ -224,9 +264,6 @@ func get_input():
 	
 
 func healthbar():
-	if Input.is_action_just_pressed("self_damage"):
-		percent += 9
-
 	if percent < 10:
 		lifeBar.set_texture(health1)
 	elif percent > 10 && percent < 20:
@@ -247,15 +284,9 @@ func healthbar():
 		lifeBar.set_texture(health9)
 	elif percent > 90 && percent < 100:
 		lifeBar.set_texture(health10)
-	elif percent > 100 && percent < 110:
-		lifeBar.set_texture(health11)
+
 
 func attacks():
-	if shield == true && isShielding == false:
-		get_node("AnimationPlayer").play("Shield")
-		velocity = Vector2(0,0)
-		isShielding = true
-	
 		
 	
 	if allow == true:
@@ -264,16 +295,45 @@ func attacks():
 			if velocity == Vector2(0,0) && crouch == false && idle == false && shield == false:
 				get_node("AnimationPlayer").play("Idle")
 				idle = true
-			else:
+				
+			if velocity != Vector2(0,0) || crouch == true || shield == true:
 				idle = false
+				
+
 			#Shield Shenanigans
 			if Input.is_action_pressed("shield"):
 				shield = true
-			
+				get_node("AnimationPlayer").play("Shielding")
+				if shieldSound == false:
+					get_node("AnimationPlayer").play("Shield")
+					shieldSound = true
+				
+				if Input.is_action_just_pressed("right"):
+					get_node("AnimationPlayer").play("rollRight")
+					shield = false
+					shieldSound = false
+				elif Input.is_action_just_pressed("left"):
+					get_node("AnimationPlayer").play("rollLeft")
+					shield = false
+					shieldSound = false
+				elif Input.is_action_just_pressed("down"):
+					shield = false
+					shieldSound = false
+					get_node("AnimationPlayer").play("spotDodge")
+
+			if  Input.is_action_just_released("shield") && shield == true:
+				shield = false
+				shieldSound = false
+				get_node("AnimationPlayer").play("unShield")
+				
+						
 			
 			if Input.is_action_just_pressed("attack"):
-				if idle == true:
+				if velocity.x >= -100 && velocity.x <= 100: 
 					get_node("AnimationPlayer").play("Jab")
+				elif dash == true:
+																									#get_node("AnimationPlayer").play("dashAttack")
+					pass
 				elif Input.is_action_pressed("right") || Input.is_action_just_pressed("left"):
 																									#get_node("AnimationPlayer").play("fTilt")
 					pass
@@ -346,73 +406,83 @@ func cantMove():
 	allow = false
 
 func rollRight():
-	velocity.x = 2500
+	velocity.x = 1000
 	facingRight = true
-	isRolling = false
+	shield = false
 
 func rollLeft():
-	velocity.x = -2500
+	velocity.x = -1000
 	facingRight = false
-	isRolling  = false
-
-func _crouch():
-	isCrouching = true
-	get_node("AnimationPlayer").play("Crouching")
-
-func _crouching():
-	if Input.is_action_pressed("down"):
-		get_node("AnimationPlayer").play("Crouching")
-	else:
-		get_node("AnimationPlayer").play("unCrouch")
+	shield = false
 
 func unCrouch():
 	crouch = false
-	isCrouching = false
-
-func _shield():
-	isShielding = true
-	get_node("AnimationPlayer").play("Shielding")
-
-
-func shielding():
-	if Input.is_action_pressed("shield") && isRolling == false:
-		get_node("AnimationPlayer").play("Shielding")
-		canRoll = true
-	else:
-		unShield()
-		
-
-	if canRoll == true && isRolling == false:
-		if Input.is_action_just_pressed("right"):
-			get_node("AnimationPlayer").play("rollRight")
-			isRolling = true
-		elif Input.is_action_just_pressed("left"):
-			get_node("AnimationPlayer").play("rollLeft")
-		elif Input.is_action_just_pressed("down"):
-			isRolling = true
-																							#get_node("AnimationPlayer").play("spotDodge")
-			pass
-
-
-func unShield():
-	shield = false
-	isShielding = false
-	canRoll = false
+	crouchSound = false
 	get_node("AnimationPlayer").play("Idle")
 	
 
-func _on_Hitbox_area_entered(area: Area2D) -> void:
-	if canTakeDamage == true:
-		percent += 10
-		if facingRight == true:
-			velocity.x = 10 * percent
-			velocity.y = 10 * percent
-			canTakeDamage = false
-		else:
-			velocity.x = -10 * percent
-			velocity.y = -10 * percent
-			canTakeDamage = false
+func unShield():
+	shield = false
+	get_node("AnimationPlayer").play("Idle")
 	
-func _on_Hitbox_area_exited(area: Area2D) -> void:
-	canTakeDamage = true
+func jumping():
+	get_node("AnimationPlayer").play("Falling")
+
+func land():
+	get_node("AnimationPlayer").play("Idle")
+	airborne = false
+
+func upSpecial():
+	get_node("AnimationPlayer").play("Falling")
+
+func _on_Hitbox_area_entered(area: Area2D) -> void:
+		if shield == true:
+			if facingRight == true:
+				velocity.x = 5 * percent
+				velocity.y = 5 * percent
+				percent += 5		
+			elif facingRight == false:
+				velocity.x = -5 * percent
+				velocity.y = 5 * percent
+				percent += 5	
+		elif shield == false:
+			if facingRight == true:
+				velocity.x = 9 * percent
+				velocity.y = 9 * percent
+				percent += 9		
+			elif facingRight == false:
+				velocity.x = -9 * percent
+				velocity.y = 9 * percent
+				percent += 9
+				
+			
+	
+
+
+
+func _on_Hitbox2_area_entered(area: Area2D) -> void:
+	if shield == true:
+		if facingRight == true:
+			velocity.x = 5 * percent
+			velocity.y = -5 * percent
+			percent += 5		
+			#get_node("AnimationPlayer").play("Hurt")
+		elif facingRight == false:
+			velocity.x = -5 * percent
+			velocity.y = -5 * percent
+			percent += 5
+			#get_node("AnimationPlayer").play("Hurt")
+	elif shield == false:
+		if facingRight == true:
+			velocity.x = 9 * percent
+			velocity.y = -9 * percent
+			percent += 9		
+			#get_node("AnimationPlayer").play("Hurt")
+		elif facingRight == false:
+			velocity.x = -9 * percent
+			velocity.y = -9 * percent
+			percent += 9
+			#get_node("AnimationPlayer").play("Hurt")
+		
+
 

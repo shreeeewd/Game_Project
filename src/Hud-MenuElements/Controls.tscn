@@ -72,7 +72,6 @@ autoplay = true
 stream = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 modulate = Color( 0, 0, 0, 0.784314 )
 margin_left = -4679.13
 margin_top = -4016.31

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vc_chrom_damage01.wav-1286dbe5813453f4ff7c65806a585eb3.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Chrom/vc_chrom/vc_chrom_damage01.wav"
+dest_files=[ "res://.import/vc_chrom_damage01.wav-1286dbe5813453f4ff7c65806a585eb3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

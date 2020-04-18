@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_jack_attackhard_L01.wav-2ce7de26c3345f4ba44ef5faab369e51.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/se_jack/se_jack_attackhard_L01.wav"
+dest_files=[ "res://.import/se_jack_attackhard_L01.wav-2ce7de26c3345f4ba44ef5faab369e51.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

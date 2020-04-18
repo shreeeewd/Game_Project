@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_pit_dash_start.wav-03a84e5ec7d328f9ef28755968c24e28.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Pit/se_pit/se_pit_dash_start.wav"
+dest_files=[ "res://.import/se_pit_dash_start.wav-03a84e5ec7d328f9ef28755968c24e28.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

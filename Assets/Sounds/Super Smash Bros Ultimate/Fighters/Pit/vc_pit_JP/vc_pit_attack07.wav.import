@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vc_pit_attack07.wav-3eaa31ec47f4b72b4541ef96884e7fde.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Pit/vc_pit_JP/vc_pit_attack07.wav"
+dest_files=[ "res://.import/vc_pit_attack07.wav-3eaa31ec47f4b72b4541ef96884e7fde.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

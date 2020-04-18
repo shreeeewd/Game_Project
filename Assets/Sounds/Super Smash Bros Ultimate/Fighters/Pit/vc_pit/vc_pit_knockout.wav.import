@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vc_pit_knockout.wav-c17f879ecbfa1524ca49e2109a887c75.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Pit/vc_pit/vc_pit_knockout.wav"
+dest_files=[ "res://.import/vc_pit_knockout.wav-c17f879ecbfa1524ca49e2109a887c75.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

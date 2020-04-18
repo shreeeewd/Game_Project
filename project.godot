@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="GameProject"
-run/main_scene="res://src/Hud-MenuElements/Level One.tscn"
+run/main_scene="res://src/Stages/Level One.tscn"
 config/icon="res://icon.png"
 
 [collision]

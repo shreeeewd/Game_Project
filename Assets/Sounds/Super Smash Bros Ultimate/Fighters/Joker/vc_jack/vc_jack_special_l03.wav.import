@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/vc_jack_special_l03.wav-6de1798bba148911ca0347605157ac4e.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Super Smash Bros Ultimate/Fighters/Joker/vc_jack/vc_jack_special_l03.wav"
+dest_files=[ "res://.import/vc_jack_special_l03.wav-6de1798bba148911ca0347605157ac4e.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
